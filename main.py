@@ -4,10 +4,14 @@ from stats import (
     get_char_count,
     get_sorted_stats,
 )
+import sys
 
 
 def main():
-    file = "./books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    file = "./" + sys.argv[1]
     short_file = file[2:]
     word_count = get_word_count(file)
     char_count = get_char_count(get_book_text(file))
