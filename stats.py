@@ -26,3 +26,16 @@ def get_char_count(text):
             char_count[char] = 1
 
     return char_count
+
+
+def sort_on(items):
+    return items["num"]
+
+
+def get_sorted_stats(chars):
+    sorted_chars = []
+    for char in chars:
+        if char.isalpha():
+            sorted_chars.append({"char": char, "num": chars[char]})
+    sorted_chars.sort(reverse=True, key=sort_on)
+    return sorted_chars
