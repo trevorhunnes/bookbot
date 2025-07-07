@@ -8,6 +8,7 @@ import sys
 
 
 def main():
+    # Check to make sure user passed in argument
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)

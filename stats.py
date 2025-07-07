@@ -1,3 +1,4 @@
+# Accept a file path and return text from that file as a string
 def get_book_text(file):
     file_contents = ""
     with open(file) as f:
@@ -6,6 +7,7 @@ def get_book_text(file):
     return file_contents
 
 
+# Accept a file path and return word count as int
 def get_word_count(file):
     words = get_book_text(file).split()
     count = 0
@@ -15,6 +17,7 @@ def get_word_count(file):
     return count
 
 
+# Accept string and return a dictionary with character->count
 def get_char_count(text):
     char_count = {}
     text = text.lower()
@@ -32,6 +35,8 @@ def sort_on(items):
     return items["num"]
 
 
+# Accept a dictionary(character->count) and return of list of dictionaries
+# Sort dictionaries from largest count to smallest
 def get_sorted_stats(chars):
     sorted_chars = []
     for char in chars:
